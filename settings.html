@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stack Alert</title>
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+<div class="settings">
+    <div class="stack-alerts">
+        <div class="logo">
+            <img src="images/so-logo.png" alt="so logo" height="40">
+            <h2>Stack Alert</h2>
+        </div>
+        <div class="field">
+            <!--            tags-->
+            <label for="tags">Tag(s)</label>
+            <textarea cols="30" id="tags" name="tags" rows="10"></textarea>
+            <small class="help-text">Type tag(s) name separate with comma. Ex: django, javascript,asp.net</small>
+        </div>
+
+        <div class="field">
+            <!--            ignoreTags-->
+            <label for="ignore_tags">Ignore Tag(s)</label>
+            <textarea cols="30" id="ignore_tags" name="tags" rows="10"></textarea>
+            <small class="help-text">Type tag(s) name separate with comma. Ex: django, javascript,asp.net</small>
+        </div>
+
+        <div class="field">
+            <!--            minOpReputation-->
+            <label for="minimum_reputation">Minimum Reputation</label>
+            <input type="number" min="1" id="minimum_reputation" value="1">
+            <small class="help-text">Only get questions from specified reputation or greater reputation user</small>
+        </div>
+
+        <div class="field">
+            <!--            interval-->
+            <label for="refresh_interval">Refresh interval(minutes)</label>
+            <input type="number" id="refresh_interval" min="1" value="1">
+            <small class="help-text">Refresh after your specified time</small>
+        </div>
+
+        <div class="field">
+            <!--            showNotifications-->
+            <label class="checkbox" for="desktop_notifications">Show desktop notifications
+                <input type="checkbox" name="desktop_notifications" id="desktop_notifications">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div class="field">
+            <label for="snooze_alert">Snooze alert for </label>
+            <select class="custom-select" id="snooze_alert">
+                <option value="0">Not applicable</option>
+                <option value="15">15 minutes</option>
+                <option value="60">1 hour</option>
+                <option value="180">3 hours</option>
+                <option value="480">8 hours</option>
+                <option value="720">12 hours</option>
+                <option value="9007199254740991">Until I back</option>
+            </select>
+        </div>
+
+        <!--        save-->
+        <button class="save-btn" id="save">Save</button>
+
+
+        <div class="alert success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Settings save successfully!
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="js/settings.js" type="text/javascript"></script>
+</body>
+
+</html>
